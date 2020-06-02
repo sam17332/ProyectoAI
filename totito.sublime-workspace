@@ -1,0 +1,473 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"move",
+				"movement"
+			],
+			[
+				"ta",
+				"tableroY"
+			],
+			[
+				"tab",
+				"tabCoor"
+			],
+			[
+				"coor",
+				"coorTab"
+			],
+			[
+				"table",
+				"tableroY"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "minimax.py",
+			"settings":
+			{
+				"buffer_size": 2217,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tablero.py",
+			"settings":
+			{
+				"buffer_size": 2876,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "AI.py",
+			"settings":
+			{
+				"buffer_size": 2321,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 234,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "nodos.py",
+			"settings":
+			{
+				"buffer_size": 690,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "proto.py",
+			"settings":
+			{
+				"buffer_size": 2225,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/ProyectoAI"
+	],
+	"file_history":
+	[
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/proyecto/prueba.py",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Negocios/TrackEat/navigation/Menu.js",
+		"/Users/rsam/Desktop/ClienteTotito.py",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/proyecto/proto.py",
+		"/Users/rsam/Desktop/proto_totito.py",
+		"/Users/rsam/Desktop/Frosty.Rmd",
+		"/Users/rsam/Desktop/SVM.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT7/hdt7/hdt7.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT7/9. SVM.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT7/8. RNA-1.R",
+		"/Users/rsam/Desktop/qrcodejs-master/index.html",
+		"/Users/rsam/Desktop/index.html",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Sistemas/ProyectoChatSO2020/README.md",
+		"/Users/rsam/Desktop/README.md",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Sistemas/chat/README.md",
+		"/Users/rsam/Desktop/client.cpp",
+		"/Users/rsam/Desktop/menu.cpp",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Sistemas/chat/client/mensaje.pb.h",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Sistemas/chat/client/mensaje.pb.cc",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Sistemas/chat/client/client.cpp",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/HDT2/funcionesRedes.py",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT2/hdt2.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT3/HDT3/HojaTrabajo3.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT5/HojaTrabajo5.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT4/HDT4/HojaTrabajo4.R",
+		"/Users/rsam/Desktop/pruebachat/menu.cpp",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Sistemas/chat/casos de uso.txt",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/HDT2/HDT2.ipynb",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/HDT2/.gitignore",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/HDT2/mnist_reader.py",
+		"/Users/rsam/Desktop/gitignore",
+		"/Users/rsam/Desktop/semaforoLog.txt",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Sistemas/chat/diccionario",
+		"/Users/rsam/Desktop/semaforo2.c",
+		"/Users/rsam/Desktop/semaforo.c",
+		"/Users/rsam/Desktop/semaforos.c",
+		"/Users/rsam/Desktop/semaforoBitacora.txt",
+		"/Users/rsam/Downloads/Ejemplo de Clustering-1.R",
+		"/Users/rsam/Desktop/cmeans",
+		"/Users/rsam/Desktop/Pais de proveniencia",
+		"/Users/rsam/Desktop/Regresión Lineal.Rmd",
+		"/Users/rsam/Desktop/HojaTrabajo4.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT3/HDT3/data_description.txt",
+		"/Users/rsam/OneDrive/Documents/U/3Tercero/Semestre2/Web/lab3/pagina1.html",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Negocios/TrackEat/assets/icons/zoom-split.svg",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/Mineria/HDT1/ejercicios.R",
+		"/Users/rsam/OneDrive/Documents/U/4Cuarto/Semestre1/AI/HDT1/.gitignore",
+		"/Users/rsam/Desktop/Ejemplo de Clustering-1.R",
+		"/Users/rsam/Downloads/web_imp_08122019.txt",
+		"/Users/rsam/Desktop/ejercicio2_2.c",
+		"/Users/rsam/OneDrive/Documents/otros/trabajo/chapi/chapiJuego/.gitignore"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Algorithm"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "minimax.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								246,
+								246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tablero.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 309.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "AI.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								233,
+								196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "nodos.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "proto.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "totito.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 179.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
