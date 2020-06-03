@@ -1,21 +1,21 @@
 from random import *
 
-class Game: #A class for managing different situations and states happening in the game and on the board
+class Mat:
     def __init__(self, Mat, dimX, dimY):
         self.Mat = Mat
         self.dimX = dimX
         self.dimY = dimY
 
-    def Initiate(self): #initiating the game board with X and Y dimensions
+    def Initiate(self):
         for i in range(0, self.dimY):
             R = []
             for j in range (0, self.dimX):
                 if i % 2 == 1 and j % 2 == 1:
-                    R.append(randint(1, 9))  # Assigning a random number from 1 to 9 to the spots in the board as the points
+                    R.append(randint(1, 9))
                 elif i % 2 == 0 and j % 2 == 0:
-                    R.append('*') # printing asterisks as the dots in the board
+                    R.append('*') 
                 else:
-                    R.append(' ') # adding extra space for actions in the game
+                    R.append(' ')
             self.Mat.append(R)
 
     def Get_matrix(self): # Board matrix
@@ -27,34 +27,10 @@ class Game: #A class for managing different situations and states happening in t
             ans.append(R)
         return ans
 
-    def Draw_mat(self): # Drawing the board marix as dots and lines
-        
-        if self.dimX > 9:
-            print(" ", end='')
-        print("   ", end='')
-        for i in range(0, self.dimX):
-            print(str(i), end='  ')
-        print()
-
-        if self.dimX > 9:
-            print(" ", end='')
-        print("   ", end='')
-        for i in range(0, self.dimX + 1):
-            print("___", end='')
-        print()
-        for j in range(self.dimY):
-            if self.dimX > 9 and j < 10:
-                print(" ", end='')
-            print(str(j) + "| ", end='')
-            for z in range(self.dimX):
-                print(str(self.Mat[j][z]), end='  ')
-            print()
-        print("   _________________________\n")
-
     def Get_currentState(self):
-        return Game(self.Get_matrix(), self.dimX, self.dimY)
+        return Mat(self.Get_matrix(), self.dimX, self.dimY)
 
-    def action(self, i, j): # Applying the actions made by the human or the computer
+    def action(self, i, j):
         Sum = 0
 
         if j % 2 == 0 and i % 2 == 1:

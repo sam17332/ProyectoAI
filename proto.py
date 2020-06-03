@@ -9,7 +9,7 @@ sio = socketio.Client()
 
 class infoGame:
     def __init__(self):
-        self.Match = DotsNBoxes()
+        self.Match = Tiros()
         self.username = ""
         self.tournament_id = ""
         self.game_id = ""
@@ -52,7 +52,6 @@ def ready(server):
                 tiro1 = i
                 tiro2 = j
     if cont <= 20:
-        print(humanBoard(server['board']))
         typeLine = tiro1
         position = tiro2
         movement = [typeLine,position]
@@ -75,7 +74,7 @@ def ready(server):
 def reset():
     row = np.ones(30) * 99
     infoGame.board = [np.ndarray.tolist(row), np.ndarray.tolist(row)]
-    infoGame.Match = DotsNBoxes()
+    infoGame.Match = Tiros()
 
 @sio.on('finish')
 def finish(server):

@@ -1,5 +1,4 @@
 class MiniMax:
-    
     def miniMax(State, Ply_num): 
 
         for i in range(State.Current.dimY):

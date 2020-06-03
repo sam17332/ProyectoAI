@@ -6,9 +6,9 @@ from tablero import *
 from nodos import *
 from convertidor import *
 
-class DotsNBoxes:
+class Tiros:
     def __init__(self):
-        currentState = Game([], 11, 11)
+        currentState = Mat([], 11, 11)
         currentState.Initiate()
         self.State = Thing(currentState)
         self.Ply_num = 2
@@ -26,7 +26,7 @@ class DotsNBoxes:
             (8,1),(8,3),(8,5),(8,7),(8,9),(10, 1),(10,3),(10,5),(10,7),(10,9)
         ]
 
-    def Human(self):
+    def Hum(self):
         horizontal = True
         vertical = True
         tocoHor = False
@@ -82,13 +82,13 @@ class DotsNBoxes:
         else:
             self.State = self.State.children[(HumanX, HumanY)]
 
-        self.Computer()
+        self.Inte()
 
-    def Computer(self):
+    def Inte(self):
         move = MiniMax.miniMax(self.State, self.Ply_num)
         self.State = self.State.children[(move[0], move[1])]
 
         (self.tabX, self.tabY) = Convertidor.coorTab(move[0], move[1])
 
     def start(self):
-        self.Human()
+        self.Hum()
