@@ -1,7 +1,6 @@
-
-class Algo: # A class for defining algorithms used (minimax and alpha-beta pruning)
+class MiniMax:
     
-    def miniMax(State, Ply_num): # Function for the minimax algorithm
+    def miniMax(State, Ply_num): 
 
         for i in range(State.Current.dimY):
             for j in range(State.Current.dimX):
@@ -14,7 +13,7 @@ class Algo: # A class for defining algorithms used (minimax and alpha-beta pruni
         i = 0
         j = 0
         for k, z in State.children.items():
-            Result = Algo.Maximum(z, Ply_num - 1, Minimum_Score)
+            Result = MiniMax.Maximum(z, Ply_num - 1, Minimum_Score)
             if Minimum_Score > Result:
                 Minimum_Score = Result
                 i = k[0]
@@ -23,7 +22,7 @@ class Algo: # A class for defining algorithms used (minimax and alpha-beta pruni
         return (i, j)
 
 
-    def Maximum(State, Ply_num, Alpha): # Alpha-beta pruning function for taking care of Alpha values
+    def Maximum(State, Ply_num, Alpha):
         if Ply_num == 0:
             return State.CurrentScore
 
@@ -36,7 +35,7 @@ class Algo: # A class for defining algorithms used (minimax and alpha-beta pruni
         i = 0
         j = 0
         for k, z in State.children.items():
-            Result = Algo.Minimum(z, Ply_num - 1, Maximum_Score)
+            Result = MiniMax.Minimum(z, Ply_num - 1, Maximum_Score)
             if Maximum_Score < Result:
                 Maximum_Score = Result
             if Result > Alpha:
@@ -45,7 +44,7 @@ class Algo: # A class for defining algorithms used (minimax and alpha-beta pruni
         return Maximum_Score
 
 
-    def Minimum(State, Ply_num, Beta): # Alpha-beta pruning function for taking care of Beta values
+    def Minimum(State, Ply_num, Beta):
         if Ply_num == 0:
             return State.CurrentScore
 
@@ -58,7 +57,7 @@ class Algo: # A class for defining algorithms used (minimax and alpha-beta pruni
         i = 0
         j = 0
         for k, z in State.children.items():
-            Result = Algo.Maximum(z, Ply_num - 1, Minimum_Score)
+            Result = MiniMax.Maximum(z, Ply_num - 1, Minimum_Score)
             if Minimum_Score > Result:
                 Minimum_Score = Result
             if Result < Beta:

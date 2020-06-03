@@ -1,6 +1,5 @@
 from random import *
 
-
 class Game: #A class for managing different situations and states happening in the game and on the board
     def __init__(self, Mat, dimX, dimY):
         self.Mat = Mat

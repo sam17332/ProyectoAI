@@ -2,12 +2,14 @@ import socketio
 import numpy as np
 import random
 from AI import *
+from board import *
 
 
 sio = socketio.Client()
 
 class infoGame:
     def __init__(self):
+        self.Match = DotsNBoxes()
         self.username = ""
         self.tournament_id = ""
         self.game_id = ""
@@ -38,25 +40,31 @@ def ready(server):
     movement = []
     infoGame.game_id = server['game_id']
     infoGame.player_turn_id = server['player_turn_id']
+    infoGame.board = server['board']
     infoGame.game_finished = False
     infoGame.ready = True
+    cont = 0
 
-    Match = DotsNBoxes(11, 11, 2)
-    Match.start()
-
-    # typeLine = random.randint(0,1)
-    # position = random.randint(0,29)
-    # tabCoor(typeLine, position)
-
-    # coorTab(move[0, move[1]])
-    # #movement = [tipo, posi]
-    
-    typeLine = Match.tabX
-    position = Match.tabY
-    movement = [typeLine,position]
+    for i in range(len(infoGame.board)):
+        for j in range(len(infoGame.board[i])):
+            if(infoGame.board[i][j] == 99):
+                cont += 1
+                tiro1 = i
+                tiro2 = j
+    if cont <= 20:
+        print(humanBoard(server['board']))
+        typeLine = tiro1
+        position = tiro2
+        movement = [typeLine,position]
+    else:
+        infoGame.Match.start()
+        typeLine = infoGame.Match.tabX
+        position = infoGame.Match.tabY
+        movement = [typeLine,position]
 
 
     print("Movement: " + str(movement[0]) + ", " + str(movement[1]))
+
     sio.emit('play',{
         'player_turn_id':infoGame.player_turn_id,
         'tournament_id': infoGame.tournament_id,
@@ -67,11 +75,12 @@ def ready(server):
 def reset():
     row = np.ones(30) * 99
     infoGame.board = [np.ndarray.tolist(row), np.ndarray.tolist(row)]
+    infoGame.Match = DotsNBoxes()
 
 @sio.on('finish')
 def finish(server):
     reset()
-
+    
     if server['player_turn_id'] == server['winner_turn_id']:
         print("Eres el ganador")
     else:

@@ -1,4 +1,4 @@
-import random
+from random import *
 import numpy as np
 import collections
 from minimax import *
@@ -6,21 +6,75 @@ from tablero import *
 from nodos import *
 from convertidor import *
 
-class DotsNBoxes: # A class for managing the moves made by the human and the computer
-    def __init__(self, Board_Xdim, Board_Ydim, Ply_num):
-        currentState = Game([], Board_Xdim, Board_Ydim)
+class DotsNBoxes:
+    def __init__(self):
+        currentState = Game([], 11, 11)
         currentState.Initiate()
         self.State = Thing(currentState)
-        self.Ply_num = Ply_num
+        self.Ply_num = 2
         self.Score = 0
         self.tabX = 0
         self.tabY = 0
+        self.tirosPosiHor = [
+            (1, 0),(3,0),(5,0),(7,0),(9,0),(1,2),(3,2),(5,2),(7,2),(9,2),
+            (1,4),(3,4),(5,4),(7,4),(9,4),(1,6),(3,6),(5,6),(7,6),(9,6),
+            (1,8),(3,8),(5,8),(7,8),(9,8),(1, 10),(3,10),(5,10),(7,10),(9,10)
+        ]
+        self.tirosPosiVer = [
+            (0,1),(0,3),(0,5),(0, 7),(0,9),(2,1),(2,3),(2,5),(2,7),(2,9),
+            (4,1),(4,3),(4,5),(4,7),(4,9),(6,1),(6,3),(6,5),(6,7),(6,9),
+            (8,1),(8,3),(8,5),(8,7),(8,9),(10, 1),(10,3),(10,5),(10,7),(10,9)
+        ]
 
-    def Human(self): # Defining the Human player and his actions/Choices
-        self.State.Draw()
+    def Human(self):
+        horizontal = True
+        vertical = True
+        tocoHor = False
+        tocoVer = False
+        HumanX = 0
+        HumanY = 0
 
-        HumanX =  3 #random.randint(0,6)
-        HumanY =  5 #random.randint(0,6)
+        if (len(self.tirosPosiHor) == 0):
+            horizontal = False
+
+        elif (len(self.tirosPosiVer) == 0):
+            vertical = False            
+
+
+        if (horizontal == True):
+            tocoHor = True
+            posi = np.random.randint(0,len(self.tirosPosiHor))
+            tiro = str(self.tirosPosiHor[posi])
+            del self.tirosPosiHor[posi]
+
+        elif (vertical == True):
+            tocoVer = True
+            posi = np.random.randint(0,len(self.tirosPosiVer))
+            tiro = str(self.tirosPosiVer[posi])
+            del self.tirosPosiVer[posi]
+
+
+        if (len(tiro) == 6):
+            tiro1 = tiro[1]
+            HumanX = int(tiro1)
+
+            tiro2 = tiro[4]
+            HumanY = int(tiro2)
+
+
+        elif (len(tiro) == 7 and tocoHor):
+            tiro1 = tiro[1]
+            HumanX = int(tiro1)
+
+            tiro2 = tiro[4:6]
+            HumanY = int(tiro2)
+
+        elif (len(tiro) == 7 and tocoVer):
+            tiro1 = tiro[1:3]
+            HumanX = int(tiro1)
+
+            tiro2 = tiro[5]
+            HumanY = int(tiro2)
 
         if (HumanX, HumanY) not in self.State.children:
             self.State.Make(HumanX, HumanY, False)
@@ -28,41 +82,13 @@ class DotsNBoxes: # A class for managing the moves made by the human and the com
         else:
             self.State = self.State.children[(HumanX, HumanY)]
 
-        #print("Current Score =====>> Your Score - AI Score = " + str(self.State.CurrentScore),end ="\n\n\n")
-
         self.Computer()
 
-
-    def Computer(self): # Defining the Computer player and its actions/Choices
-        #self.State.Draw()
-
-
-        move = Algo.miniMax(self.State, self.Ply_num)
-
+    def Computer(self):
+        move = MiniMax.miniMax(self.State, self.Ply_num)
         self.State = self.State.children[(move[0], move[1])]
 
-        #print("AI selected the following coordinates to play:\n" + "(" ,str(move[0]), ", " + str(move[1]), ")", end = "\n\n")
-        (tabX, tabY) = Convertidor.coorTab(move[0], move[1])
-        #print("X: " + str(tabX) + " Y: " + str(tabY))
-
-        if len(self.State.children) == 0:
-            self.State.Draw()
-            self.Evaluation()
-            return
-
-        #self.Human()
-
-    def Evaluation(self): # Evaluation function for taking care of the final scores
-        print("Stop this Madness!!!\n")
-        if self.State.CurrentScore > 0:
-            print("You won you crazy little unicorn!! You are the new hope for the mankind!")
-            exit()
-        elif self.State.CurrentScore < 0:
-            print("!!! Inevitable Doom!!! You were crushed by the AI!! ")
-            exit()
-        else:
-            print("Draw! Well Congratulations! you are as smart as the AI!")
-            exit()
+        (self.tabX, self.tabY) = Convertidor.coorTab(move[0], move[1])
 
     def start(self):
-        self.Computer()
+        self.Human()

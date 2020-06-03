@@ -42,6 +42,11 @@ def ready(server):
     typeLine = random.randint(0,1)
     position = random.randint(0,29)
 
+
+    # while int(infoGame.board[typeLine][position] != 99):
+    #     typeLine = random.randint(0,1)
+    #     position = random.randint(0,29)
+    
     movement = [typeLine,position]
 
 
